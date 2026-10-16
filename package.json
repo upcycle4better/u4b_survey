@@ -1,0 +1,16 @@
+{
+  "name": "u4b-survey-recognition",
+  "version": "0.4.3",
+  "private": true,
+  "type": "module",
+  "description": "Vercel-ready U4B school visit survey recognition, review, Excel and chart workflow.",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check public/app.js && node --check public/projective-registration.js && node --check public/page-template-matcher.js && node --check public/scan-calibration.js && node --check public/survey-pages.js && node --check public/scan-layout.js && node --check public/omr-tolerance.js && node --check public/handwriting-preprocess.js && node --check public/handwriting-ocr.js && node --check public/handwriting-worker.js && node --check public/report-config.js && node --check public/xlsx-export.js && node --check api/health.mjs && node --check scripts/dev-server.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="U4B Survey Intelligence converts scanned surveys into reviewed data, Excel reports and charts." />
+    <meta name="theme-color" content="#4988aa" />
+    <title>U4B Survey Intelligence</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header-inner">
+        <a class="brand" href="/" aria-label="U4B Survey Intelligence home">
+          <img src="/assets/u4b-logo.png" alt="U4B" />
+          <span class="brand-copy">
+            <strong>U4B Survey Intelligence</strong>
+            <small>Recognition and reporting system · v0.4.3</small>
+          </span>
+        </a>
+        <a
+          class="user-guide-link"
+          href="https://drive.google.com/file/d/1REh7TaDQGVsdcjxqO4hINw5KqOEUEfUM/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open the U4B user guide in a new tab"
+        >
+          <span class="user-guide-copy">
+            <strong>User Guide</strong>
+            <small>Scan or click to open</small>
+          </span>
+          <img src="/assets/u4b-user-guide-qr.svg" alt="QR code for the U4B user guide" />
+        </a>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section id="upload-panel" class="panel upload-panel" aria-label="Survey upload">
+        <div class="intake-grid">
+          <label id="drop-zone" class="drop-zone" for="pdf-input">
+            <input id="pdf-input" type="file" accept="application/pdf,.pdf" multiple hidden />
+            <span class="upload-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M5 14v5h14v-5"/></svg>
+            </span>
+            <strong>Add PDF files - multiple files supported</strong>
+            <span>Select several PDFs together, or return here to add them one at a time. Every selected file will appear in the list below.</span>
+          </label>
+
+          <div class="batch-card" aria-label="Batch details">
+            <div class="batch-card-heading">
+              <span class="section-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v15H4z"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>
+              </span>
+              <div>
+                <strong>Batch details</strong>
+                <span>School and date are entered manually.</span>
+              </div>
+            </div>
+            <div class="batch-fields">
+              <label>
+                <span><svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v15H4z"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Survey date</span>
+                <input id="visit-date-input" type="date" />
+              </label>
+              <label>
+                <span><svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 13h2v2H9zM14 13h2v2h-2z"/></svg>School name</span>
+                <input id="school-input" type="text" placeholder="Enter school name" autocomplete="organization" />
+              </label>
+              <label>
+                <span><svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Pages per student</span>
+                <select id="pages-per-survey">
+                  <option value="6" selected>6 pages (Before, Before, After, After, Feedback, blank)</option>
+                  <option value="5">5 pages</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="file-summary" class="file-summary" hidden>
+          <div class="file-summary-content">
+            <div class="file-summary-copy">
+              <span class="file-summary-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span>
+              <div>
+                <strong id="file-name"></strong>
+                <span id="file-details"></span>
+              </div>
+            </div>
+            <ul id="selected-file-list" class="selected-file-list" aria-label="Selected PDF files"></ul>
+          </div>
+          <div class="file-summary-actions">
+            <button id="add-files-button" class="button" type="button">
+              <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              Add more PDFs
+            </button>
+            <button id="process-button" class="button button-primary" type="button">
+              <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h5M8 16h3"/><path d="m15 15 1.5 1.5L20 13"/></svg>
+              Extract all selected PDFs
+            </button>
+          </div>
+        </div>
+
+        <div id="progress" class="progress-block" hidden aria-live="polite">
+          <div class="progress-label">
+            <span id="progress-text">Preparing PDF…</span>
+            <strong id="progress-value">0%</strong>
+          </div>
+          <progress id="progress-bar" max="100" value="0">0%</progress>
+        </div>
+        <p id="upload-error" class="message message-error" role="alert" hidden></p>
+        <div class="local-data-actions">
+          <button id="clear-data-button" class="button" type="button">Clear local data</button>
+        </div>
+      </section>
+
+      <section id="workspace" hidden>
+        <div class="summary-grid" aria-label="Batch summary">
+          <article class="metric">
+            <span><svg class="metric-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Surveys</span>
+            <strong id="metric-surveys">0</strong>
+          </article>
+          <article class="metric">
+            <span><svg class="metric-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="m8 12 2.5 2.5L16 9"/></svg>Ready</span>
+            <strong id="metric-ready">0</strong>
+          </article>
+          <article class="metric metric-warning">
+            <span><svg class="metric-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5M12 17.5v.5"/></svg>Needs review</span>
+            <strong id="metric-review">0</strong>
+          </article>
+        </div>
+
+        <div class="workspace-grid">
+          <aside class="panel survey-list-panel" aria-labelledby="survey-list-title">
+            <div class="panel-heading compact">
+              <div>
+                <p class="eyebrow">Batch</p>
+                <h2 id="survey-list-title">Student surveys</h2>
+              </div>
+            </div>
+            <div id="survey-list" class="survey-list"></div>
+          </aside>
+
+          <section class="panel review-panel" aria-labelledby="review-title">
+            <div class="panel-heading review-heading">
+              <div>
+                <p id="review-kicker" class="eyebrow">Survey 1</p>
+                <h2 id="review-title">Review extracted answers</h2>
+              </div>
+              <div class="review-actions">
+                <button id="approve-button" class="button button-primary" type="button"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="m8 12 2.5 2.5L16 9"/></svg>Mark reviewed</button>
+              </div>
+            </div>
+
+            <div class="review-layout">
+              <div class="document-viewer">
+                <div id="page-tabs" class="page-tabs" role="tablist" aria-label="Survey pages"></div>
+                <div class="canvas-wrap">
+                  <p id="review-notice" class="review-notice" hidden>Saved answers are available, but the scanned page image is not stored. Select the original PDF again to restore page images without losing corrections.</p>
+                  <canvas id="review-canvas" aria-label="Scanned survey page"></canvas>
+                  <div id="answer-overlay" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <div class="answer-editor">
+                <div class="answer-toolbar">
+                  <label>
+                    <span>Show section</span>
+                    <select id="section-filter">
+                      <option value="all">All questions</option>
+                      <option value="before">Before</option>
+                      <option value="after">After</option>
+                      <option value="feedback">Feedback</option>
+                    </select>
+                  </label>
+                  <span id="review-status" class="review-status"></span>
+                </div>
+                <form id="answer-form"></form>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel results-panel" aria-labelledby="results-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Batch output</p>
+              <h2 id="results-title">Combined summary and export</h2>
+            </div>
+            <div class="review-actions">
+              <button id="download-json-button" class="button" type="button"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5v18h3M16 3h3v18h-3M10 8h4M10 12h4M10 16h4"/></svg>Download JSON</button>
+              <button id="download-csv-button" class="button" type="button"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Download CSV</button>
+              <button id="download-xlsx-button" class="button button-primary" type="button"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h16M10 4v16"/><path d="m13 14 2 2 3-4"/></svg>Download Excel with charts</button>
+            </div>
+          </div>
+          <div id="chart-grid" class="chart-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Developed by <strong>Cherfaoui Ayoub</strong></span>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="/vendor/jszip.min.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

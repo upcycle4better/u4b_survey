@@ -1,0 +1,1134 @@
+{
+  "id": "u4b_school_visit_english_v2",
+  "name": "U4B School Visit Survey - English",
+  "version": "1.0.0",
+  "pageWidth": 612,
+  "pageHeight": 792,
+  "pagesPerSurvey": 5,
+  "markThreshold": 0.075,
+  "singleMarkThreshold": 0.04,
+  "conflictThreshold": 0.09,
+  "ambiguityMargin": 0.015,
+  "questions": [
+    {
+      "key": "SCHOOL",
+      "section": "before",
+      "page": 1,
+      "type": "text",
+      "title": "School name",
+      "textBox": [
+        108,
+        42,
+        562,
+        70
+      ],
+      "recognize": false
+    },
+    {
+      "key": "STUDENT_NAME",
+      "section": "before",
+      "page": 1,
+      "type": "text",
+      "title": "Student name",
+      "textBox": [
+        164,
+        70,
+        562,
+        99
+      ]
+    },
+    {
+      "key": "SURVEY_DATE",
+      "section": "before",
+      "page": 1,
+      "type": "text",
+      "title": "Survey date",
+      "textBox": [
+        92,
+        98,
+        283,
+        127
+      ],
+      "recognize": false
+    },
+    {
+      "key": "GROUP_NUMBER",
+      "section": "before",
+      "page": 1,
+      "type": "text",
+      "title": "Group number",
+      "textBox": [
+        415,
+        98,
+        563,
+        127
+      ],
+      "recognize": false
+    },
+    {
+      "key": "GENDER",
+      "section": "before",
+      "page": 1,
+      "type": "single",
+      "title": "Gender",
+      "options": [
+        {
+          "value": "Female",
+          "box": [
+            51.0,
+            160.6,
+            63.0,
+            172.3
+          ]
+        },
+        {
+          "value": "Male",
+          "box": [
+            51.0,
+            184.6,
+            63.0,
+            196.3
+          ]
+        }
+      ]
+    },
+    {
+      "key": "AGE",
+      "section": "before",
+      "page": 1,
+      "type": "single",
+      "title": "Age",
+      "options": [
+        {
+          "value": "7-9",
+          "box": [
+            51.0,
+            230.2,
+            63.0,
+            241.9
+          ]
+        },
+        {
+          "value": "10-12",
+          "box": [
+            51.0,
+            254.2,
+            63.0,
+            265.9
+          ]
+        },
+        {
+          "value": "13-15",
+          "box": [
+            51.0,
+            278.2,
+            63.0,
+            289.9
+          ]
+        },
+        {
+          "value": "16-18",
+          "box": [
+            51.0,
+            302.2,
+            63.0,
+            313.9
+          ]
+        },
+        {
+          "value": "19-21",
+          "box": [
+            306.6,
+            228.1,
+            318.6,
+            239.9
+          ]
+        },
+        {
+          "value": "22-24",
+          "box": [
+            306.6,
+            253.7,
+            318.6,
+            265.4
+          ]
+        },
+        {
+          "value": "25+",
+          "box": [
+            306.6,
+            277.4,
+            318.6,
+            289.2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q1",
+      "section": "before",
+      "page": 1,
+      "type": "single",
+      "title": "How much do you know about textile waste and recycling?",
+      "options": [
+        {
+          "value": "I know nothing",
+          "box": [
+            51.0,
+            367.8,
+            63.0,
+            379.6
+          ]
+        },
+        {
+          "value": "I know a little bit",
+          "box": [
+            51.0,
+            391.1,
+            63.0,
+            402.9
+          ]
+        },
+        {
+          "value": "I know a lot",
+          "box": [
+            306.6,
+            369.8,
+            318.6,
+            381.6
+          ]
+        },
+        {
+          "value": "I know everything",
+          "box": [
+            306.6,
+            393.8,
+            318.6,
+            405.6
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q2",
+      "section": "before",
+      "page": 1,
+      "type": "single",
+      "title": "How much do you care about the environment?",
+      "options": [
+        {
+          "value": "I do not care",
+          "box": [
+            51.0,
+            449.2,
+            63.0,
+            460.9
+          ]
+        },
+        {
+          "value": "I care a little",
+          "box": [
+            51.0,
+            475.2,
+            63.0,
+            487.0
+          ]
+        },
+        {
+          "value": "I care a lot",
+          "box": [
+            306.6,
+            455.2,
+            318.6,
+            466.9
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q3",
+      "section": "before",
+      "page": 1,
+      "type": "single",
+      "title": "How important is textile waste and recycling to you?",
+      "options": [
+        {
+          "value": "Not Important",
+          "box": [
+            51.0,
+            541.8,
+            63.0,
+            553.6
+          ]
+        },
+        {
+          "value": "A little Important",
+          "box": [
+            51.0,
+            567.1,
+            63.0,
+            578.9
+          ]
+        },
+        {
+          "value": "Important",
+          "box": [
+            306.6,
+            541.8,
+            318.6,
+            553.6
+          ]
+        },
+        {
+          "value": "Very Important",
+          "box": [
+            306.6,
+            567.1,
+            318.6,
+            578.9
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q4",
+      "section": "before",
+      "page": 1,
+      "type": "multi",
+      "title": "What do you do with your unwanted clothes?",
+      "options": [
+        {
+          "value": "Donate it to charity",
+          "box": [
+            51.0,
+            656.6,
+            63.0,
+            668.4
+          ]
+        },
+        {
+          "value": "Throw it in the trash",
+          "box": [
+            51.0,
+            680.6,
+            63.0,
+            692.4
+          ]
+        },
+        {
+          "value": "Give it to friends or family",
+          "box": [
+            51.0,
+            704.6,
+            63.0,
+            716.4
+          ]
+        },
+        {
+          "value": "Repurpose it as cloths/items",
+          "box": [
+            306.6,
+            656.6,
+            318.6,
+            668.4
+          ]
+        },
+        {
+          "value": "Drop it at a textile recycling bin",
+          "box": [
+            306.6,
+            680.6,
+            318.6,
+            692.4
+          ]
+        },
+        {
+          "value": "Other",
+          "box": [
+            51.0,
+            728.4,
+            63.0,
+            740.2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q5",
+      "section": "before",
+      "page": 2,
+      "type": "multi",
+      "title": "What is your reason for throwing clothing?",
+      "options": [
+        {
+          "value": "It does not fit anymore",
+          "box": [
+            51.0,
+            96.6,
+            63.0,
+            108.4
+          ]
+        },
+        {
+          "value": "It is damaged",
+          "box": [
+            51.0,
+            122.2,
+            63.0,
+            133.9
+          ]
+        },
+        {
+          "value": "I do not like it anymore",
+          "box": [
+            51.0,
+            145.9,
+            63.0,
+            157.7
+          ]
+        },
+        {
+          "value": "I never wear it",
+          "box": [
+            306.6,
+            98.6,
+            318.6,
+            110.4
+          ]
+        },
+        {
+          "value": "It is not fashionable anymore",
+          "box": [
+            306.6,
+            122.6,
+            318.6,
+            134.4
+          ]
+        },
+        {
+          "value": "Other",
+          "box": [
+            51.0,
+            169.9,
+            63.0,
+            181.7
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q6",
+      "section": "before",
+      "page": 2,
+      "type": "single",
+      "title": "How often do you buy new clothing?",
+      "options": [
+        {
+          "value": "Weekly",
+          "box": [
+            51.0,
+            259.4,
+            63.0,
+            271.2
+          ]
+        },
+        {
+          "value": "Every month",
+          "box": [
+            51.0,
+            283.4,
+            63.0,
+            295.2
+          ]
+        },
+        {
+          "value": "Every few months",
+          "box": [
+            51.0,
+            307.4,
+            63.0,
+            319.2
+          ]
+        },
+        {
+          "value": "Every six months",
+          "box": [
+            306.6,
+            259.4,
+            318.6,
+            271.2
+          ]
+        },
+        {
+          "value": "Yearly",
+          "box": [
+            306.6,
+            283.4,
+            318.6,
+            295.2
+          ]
+        },
+        {
+          "value": "Other",
+          "box": [
+            306.6,
+            305.4,
+            318.6,
+            317.2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q7",
+      "section": "before",
+      "page": 2,
+      "type": "single",
+      "title": "Do you shop at thrift/bundle shops?",
+      "options": [
+        {
+          "value": "Yes",
+          "box": [
+            51.0,
+            397.0,
+            63.0,
+            408.7
+          ]
+        },
+        {
+          "value": "No",
+          "box": [
+            51.0,
+            418.9,
+            63.0,
+            430.7
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q8",
+      "section": "before",
+      "page": 2,
+      "type": "single",
+      "title": "If yes, how often?",
+      "options": [
+        {
+          "value": "Weekly",
+          "box": [
+            51.0,
+            509.8,
+            63.0,
+            521.5
+          ]
+        },
+        {
+          "value": "Every month",
+          "box": [
+            51.0,
+            533.8,
+            63.0,
+            545.5
+          ]
+        },
+        {
+          "value": "Every few months",
+          "box": [
+            51.0,
+            557.8,
+            63.0,
+            569.5
+          ]
+        },
+        {
+          "value": "Every six months",
+          "box": [
+            306.6,
+            509.8,
+            318.6,
+            521.5
+          ]
+        },
+        {
+          "value": "Yearly",
+          "box": [
+            306.6,
+            533.8,
+            318.6,
+            545.5
+          ]
+        },
+        {
+          "value": "Other",
+          "box": [
+            306.6,
+            557.8,
+            318.6,
+            569.5
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q9",
+      "section": "before",
+      "page": 2,
+      "type": "single",
+      "title": "I can help reduce textile waste - Before",
+      "options": [
+        {
+          "value": "Strongly disagree",
+          "box": [
+            51.0,
+            647.3,
+            63.0,
+            659.0
+          ]
+        },
+        {
+          "value": "Disagree",
+          "box": [
+            51.0,
+            671.3,
+            63.0,
+            683.0
+          ]
+        },
+        {
+          "value": "Agree",
+          "box": [
+            306.6,
+            647.3,
+            318.6,
+            659.0
+          ]
+        },
+        {
+          "value": "Strongly agree",
+          "box": [
+            306.6,
+            671.3,
+            318.6,
+            683.0
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q10",
+      "section": "after",
+      "page": 3,
+      "type": "single",
+      "title": "How has what you know about textile waste and recycling changed?",
+      "options": [
+        {
+          "value": "It has changed a lot",
+          "box": [
+            51.0,
+            214.5,
+            63.0,
+            226.2
+          ]
+        },
+        {
+          "value": "It has changed a little",
+          "box": [
+            51.0,
+            247.4,
+            63.0,
+            259.2
+          ]
+        },
+        {
+          "value": "It has not changed",
+          "box": [
+            288.6,
+            216.5,
+            300.6,
+            228.2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q11",
+      "section": "after",
+      "page": 3,
+      "type": "paragraph",
+      "title": "Most important thing learned today",
+      "textBox": [
+        44,
+        325,
+        562,
+        435
+      ]
+    },
+    {
+      "key": "Q12",
+      "section": "after",
+      "page": 3,
+      "type": "multi",
+      "title": "How did the school visit make you feel about textile recycling?",
+      "options": [
+        {
+          "value": "Happy",
+          "box": [
+            51.0,
+            510.6,
+            63.0,
+            522.4
+          ]
+        },
+        {
+          "value": "Sad",
+          "box": [
+            51.0,
+            543.8,
+            63.0,
+            555.6
+          ]
+        },
+        {
+          "value": "Motivated",
+          "box": [
+            51.0,
+            575.8,
+            63.0,
+            587.5
+          ]
+        },
+        {
+          "value": "Confused",
+          "box": [
+            306.6,
+            512.6,
+            318.6,
+            524.4
+          ]
+        },
+        {
+          "value": "Interested in the topic",
+          "box": [
+            306.6,
+            544.6,
+            318.6,
+            556.3
+          ]
+        },
+        {
+          "value": "Angry",
+          "box": [
+            306.6,
+            576.5,
+            318.6,
+            588.2
+          ]
+        },
+        {
+          "value": "Other",
+          "box": [
+            51.0,
+            608.4,
+            63.0,
+            620.2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q13",
+      "section": "after",
+      "page": 3,
+      "type": "single",
+      "title": "How much do you care about the environment? - After",
+      "options": [
+        {
+          "value": "I do not care at all",
+          "box": [
+            51.0,
+            684.4,
+            63.0,
+            696.1
+          ]
+        },
+        {
+          "value": "I care a little",
+          "box": [
+            51.0,
+            717.6,
+            63.0,
+            729.4
+          ]
+        },
+        {
+          "value": "I care a lot",
+          "box": [
+            288.6,
+            686.4,
+            300.6,
+            698.2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q14",
+      "section": "after",
+      "page": 4,
+      "type": "single",
+      "title": "How important is textile waste and recycling? - After",
+      "options": [
+        {
+          "value": "Not important at all",
+          "box": [
+            51.0,
+            82.2,
+            63.0,
+            94.0
+          ]
+        },
+        {
+          "value": "A little important",
+          "box": [
+            51.0,
+            113.2,
+            63.0,
+            124.9
+          ]
+        },
+        {
+          "value": "Important",
+          "box": [
+            288.6,
+            84.2,
+            300.6,
+            96.0
+          ]
+        },
+        {
+          "value": "Very important",
+          "box": [
+            288.6,
+            116.2,
+            300.6,
+            127.9
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q15",
+      "section": "after",
+      "page": 4,
+      "type": "multi",
+      "title": "In the future, what will you do with unwanted clothing?",
+      "options": [
+        {
+          "value": "Donate it to charity",
+          "box": [
+            51.0,
+            169.9,
+            63.0,
+            181.7
+          ]
+        },
+        {
+          "value": "Throw it in the trash",
+          "box": [
+            51.0,
+            196.8,
+            63.0,
+            208.6
+          ]
+        },
+        {
+          "value": "Give it to friends or family",
+          "box": [
+            51.0,
+            223.7,
+            63.0,
+            235.4
+          ]
+        },
+        {
+          "value": "Repurpose it as cloths/items",
+          "box": [
+            306.6,
+            169.9,
+            318.6,
+            181.7
+          ]
+        },
+        {
+          "value": "Drop it at a textile recycling bin",
+          "box": [
+            306.6,
+            196.8,
+            318.6,
+            208.6
+          ]
+        },
+        {
+          "value": "Other",
+          "box": [
+            51.0,
+            256.5,
+            63.0,
+            268.2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q16",
+      "section": "after",
+      "page": 4,
+      "type": "single",
+      "title": "In the future, how often will you buy new clothing?",
+      "options": [
+        {
+          "value": "Weekly",
+          "box": [
+            51.0,
+            331.1,
+            63.0,
+            342.9
+          ]
+        },
+        {
+          "value": "Every month",
+          "box": [
+            51.0,
+            356.4,
+            63.0,
+            368.2
+          ]
+        },
+        {
+          "value": "Every few months",
+          "box": [
+            51.0,
+            380.4,
+            63.0,
+            392.2
+          ]
+        },
+        {
+          "value": "Every six months",
+          "box": [
+            324.6,
+            333.1,
+            336.6,
+            344.9
+          ]
+        },
+        {
+          "value": "Yearly",
+          "box": [
+            324.6,
+            357.1,
+            336.6,
+            368.9
+          ]
+        },
+        {
+          "value": "Other",
+          "box": [
+            51.0,
+            402.4,
+            63.0,
+            414.1
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q17",
+      "section": "after",
+      "page": 4,
+      "type": "single",
+      "title": "Would you consider shopping at thrift/bundle stores?",
+      "options": [
+        {
+          "value": "Yes",
+          "box": [
+            51.0,
+            491.2,
+            63.0,
+            502.9
+          ]
+        },
+        {
+          "value": "No",
+          "box": [
+            324.6,
+            493.2,
+            336.6,
+            505.0
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q18",
+      "section": "after",
+      "page": 4,
+      "type": "single",
+      "title": "I can help reduce textile waste - After",
+      "options": [
+        {
+          "value": "Strongly disagree",
+          "box": [
+            51.0,
+            580.7,
+            63.0,
+            592.5
+          ]
+        },
+        {
+          "value": "Disagree",
+          "box": [
+            51.0,
+            606.2,
+            63.0,
+            618.0
+          ]
+        },
+        {
+          "value": "Agree",
+          "box": [
+            324.6,
+            582.7,
+            336.6,
+            594.5
+          ]
+        },
+        {
+          "value": "Strongly agree",
+          "box": [
+            324.6,
+            604.7,
+            336.6,
+            616.5
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Q19",
+      "section": "after",
+      "page": 4,
+      "type": "single",
+      "title": "How likely are you to tell other people what you learned?",
+      "options": [
+        {
+          "value": "Very unlikely",
+          "box": [
+            51.0,
+            693.7,
+            63.0,
+            705.5
+          ]
+        },
+        {
+          "value": "Unlikely",
+          "box": [
+            51.0,
+            719.0,
+            63.0,
+            730.8
+          ]
+        },
+        {
+          "value": "Likely",
+          "box": [
+            324.6,
+            695.8,
+            336.6,
+            707.5
+          ]
+        },
+        {
+          "value": "Very likely",
+          "box": [
+            324.6,
+            719.8,
+            336.6,
+            731.5
+          ]
+        }
+      ]
+    },
+    {
+      "key": "F1",
+      "section": "feedback",
+      "page": 5,
+      "type": "single",
+      "title": "Favourite part of the school visit",
+      "options": [
+        {
+          "value": "Tote Bag Making Workshop",
+          "box": [
+            51.0,
+            140.5,
+            63.0,
+            152.3
+          ]
+        },
+        {
+          "value": "Quiz",
+          "box": [
+            51.0,
+            165.8,
+            63.0,
+            177.6
+          ]
+        },
+        {
+          "value": "Factory Tour",
+          "box": [
+            324.6,
+            142.6,
+            336.6,
+            154.3
+          ]
+        },
+        {
+          "value": "Shop",
+          "box": [
+            324.6,
+            166.6,
+            336.6,
+            178.3
+          ]
+        }
+      ]
+    },
+    {
+      "key": "F2",
+      "section": "feedback",
+      "page": 5,
+      "type": "paragraph",
+      "title": "Questions that were not answered",
+      "textBox": [
+        44,
+        275,
+        562,
+        383
+      ]
+    },
+    {
+      "key": "F3",
+      "section": "feedback",
+      "page": 5,
+      "type": "paragraph",
+      "title": "Feedback on the school visit",
+      "textBox": [
+        44,
+        472,
+        562,
+        583
+      ]
+    }
+  ]
+}

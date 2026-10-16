@@ -1,0 +1,7 @@
+tests/
+reference/
+docs/
+scripts/
+*.zip
+*.log
+.DS_Store
