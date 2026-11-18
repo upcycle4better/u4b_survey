@@ -1,5 +1,5 @@
 const TRANSFORMERS_MODULE = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js";
-const MODEL_ID = "Xenova/trocr-small-handwritten";
+const MODEL_ID = "datalab-to/chandra-ocr-2";
 
 let recognizerPromise = null;
 
